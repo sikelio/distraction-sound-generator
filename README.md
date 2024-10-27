@@ -34,7 +34,7 @@ Ce script génère une séquence de motifs auditifs basée sur des valeurs aléa
 - `0` : Silence
 - `-1` : Son grave (220 Hz)
 
-Die erzeugte Sequenz dauert standardmäßig fünf Minuten (oder die angegebene Dauer), und die Zustände sind mindestens alle zwei Sekunden voneinander entfernt. Dieses Skript hilft, die Reaktion der Teilnehmer auf Schmerzreize unter dem Einfluss verschiedener akustischer Signale zu untersuchen.
+La séquence générée dure cinq minutes par défaut (ou la durée renseignée), et les états sont espacés d'au moins deux secondes. Ce script aide à étudier la réaction des participants aux stimuli douloureux sous l'influence de différents indices auditifs.
 
 ## English
 
