@@ -1,18 +1,23 @@
+let isStopped = false;
+let timerInterval;
+
 const generateSoundPattern = () => {
+    isStopped = false;
+
+    clearInterval(timerInterval);
+
     const minutesInput = document.getElementById('minutesInput');
-    const secondsInFiveMinutes =
-        (
-            minutesInput.value === 0 || minutesInput.value == undefined || minutesInput.value == ''
-                ? 5
-                : minutesInput.value
-        ) * 60;
-    
+    const secondsInDuration = 
+        (minutesInput.value === 0 || minutesInput.value == undefined || minutesInput.value == '' 
+            ? 5 
+            : minutesInput.value) * 60;
+
     let pattern = [];
     let currentIndex = 0;
     let nbHighSounds = 0;
     let nbLowSounds = 0;
 
-    while (currentIndex < secondsInFiveMinutes) {
+    while (currentIndex < secondsInDuration) {
         const value = Math.floor(Math.random() * 3) - 1;
 
         pattern[currentIndex] = value;
@@ -30,8 +35,10 @@ const generateSoundPattern = () => {
     document.getElementById('nbHighSounds').innerText = `0 / ${nbHighSounds}`;
     document.getElementById('nbLowSounds').innerText = `0 / ${nbLowSounds}`;
 
+    startTimer(secondsInDuration);
     playPattern(pattern, nbHighSounds, nbLowSounds);
 };
+
 
 const playPattern = (pattern, totalHighSounds, totalLowSounds) => {
     let currentIndex = 0;
@@ -39,7 +46,11 @@ const playPattern = (pattern, totalHighSounds, totalLowSounds) => {
     let currentLowSounds = 0;
 
     const playNextSound = () => {
-        if (currentIndex >= pattern.length) {
+        if (isStopped || currentIndex >= pattern.length) {
+            clearInterval(timerInterval);
+
+            document.getElementById('timeRemaining').innerText = '00:00';
+
             return;
         }
 
@@ -76,4 +87,36 @@ const generateTone = (frequency) => {
     oscillator.stop(audioContext.currentTime + 0.5);
 }
 
+const startTimer = (duration) => {
+    let timeRemaining = duration - 1;
+
+    timerInterval = setInterval(() => {
+        if (isStopped || timeRemaining < 0) {
+            clearInterval(timerInterval);
+
+            document.getElementById('timeRemaining').innerText = '00:00';
+
+            return;
+        }
+
+        const minutes = Math.floor(timeRemaining / 60);
+        const seconds = timeRemaining % 60;
+
+        document.getElementById('timeRemaining').innerText = 
+            `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+
+        timeRemaining--;
+    }, 1000);
+};
+
 document.getElementById('generateBtn').addEventListener('click', generateSoundPattern);
+
+document.getElementById('stopBtn').addEventListener('click', () => {
+    isStopped = true;
+
+    document.getElementById('nbHighSounds').innerText = `0 / 0`;
+    document.getElementById('nbLowSounds').innerText = `0 / 0`;
+    document.getElementById('timeRemaining').innerText = '00:00';
+
+    clearInterval(timerInterval);
+});

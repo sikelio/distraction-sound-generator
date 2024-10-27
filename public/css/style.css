@@ -9,7 +9,7 @@ body {
   color: #fff;
 }
 
-#generateBtn {
+#generateBtn, #stopBtn {
   padding: 10px;
   margin: 10px 0;
   font-size: 18px;
@@ -24,7 +24,17 @@ body {
 }
 
 #generateBtn:hover {
-  background-color: #45a049;
+  background-color: #39823c;
+  color: #fff;
+}
+
+#stopBtn {
+  background-color: #f22f2f;
+}
+
+#stopBtn:hover {
+  background-color: #c52a2a;
+  color: #fff;
 }
 
 input[type="number"] {

@@ -3,13 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/distraction-sound-generator/public/css/style.css" />
+    <link rel="stylesheet" href="./public/css/style.css" />
     <title>Distraction Sound Generator</title>
   </head>
   <body>
     <main>
       <input type="number" id="minutesInput" placeholder="Minutes" />
       <button id="generateBtn">Start</button>
+      <button id="stopBtn">Stop</button>
+
+      <p>
+        Time remaining: <span id="timeRemaining">
+          00:00
+        </span>
+      </p>
 
       <p>Number of high sounds: <span id="nbHighSounds">0 / 0</span></p>
 
@@ -25,6 +32,6 @@
       </p>
     </footer>
 
-    <script src="/distraction-sound-generator/public/js/script.js"></script>
+    <script src="./public/js/script.js"></script>
   </body>
 </html>
