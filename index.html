@@ -15,10 +15,14 @@
     </a>
 
     <main>
-      <input type="number" id="minutesInput" placeholder="Minutes" min="0" />
+      <div id="input-group">
+        <input type="number" id="minutesInput" placeholder="Minutes" min="0" />
 
-      <button id="generateBtn">Start</button>
-      <button id="stopBtn">Stop</button>
+        <div id="btn-group">
+          <button id="generateBtn">Start</button>
+          <button id="stopBtn">Stop</button>
+        </div>
+      </div>
 
       <p>
         Time remaining: <span id="timeRemaining">
