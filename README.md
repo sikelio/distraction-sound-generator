@@ -2,7 +2,7 @@
 
 ## Table of content / Inhaltsübersicht / Table des matières
 
-* [About / Über / A propos](#about--über--a-propos)
+* [About / Über / À propos](#about--über--à-propos)
 * Usage / Verwendung / Usage
     * [🇬🇧 - English version](#english)
     * [🇩🇪 - Deutsche Version](#deutsch)
@@ -10,7 +10,7 @@
 * [Licence / Lizenz / Licence](#licence--lizenz--licence)
 * [Author / Autor / Auteur](#author--autor--auteur)
 
-## About / Über / A propos
+## About / Über / À propos
 
 ### 🇬🇧
 This script generates a sequence of auditory patterns based on random values of -1, 0, and 1, representing different states. It is intended for use in studies exploring the effects of auditory distraction on pain perception. The generated sounds are as follows:
@@ -18,15 +18,15 @@ This script generates a sequence of auditory patterns based on random values of 
 - `0`: Silence
 - `-1`: Low tone (220 Hz)
 
-The generated sequence lasts for five minutes by default (or the specified duration), and the states are spaced by at least two seconds. This script helps study how participants respond to pain stimuli under the influence of different auditory cues.
+The generated sequence lasts five minutes by default (or for the specified duration), and the states are spaced by at least two seconds. This script helps study how participants respond to pain stimuli under the influence of different auditory cues.
 
 ### 🇩🇪
-Dieses Skript erzeugt eine Sequenz von akustischen Mustern basierend auf zufälligen Werten von -1, 0 und 1, die verschiedene Zustände darstellen. Es wird in Studien verwendet, die die Auswirkungen von akustischer Ablenkung auf die Schmerzempfindung untersuchen. Die erzeugten Töne sind:
+Dieses Skript erzeugt eine Sequenz akustischer Muster, basierend auf zufälligen Werten von -1, 0 und 1, die verschiedene Zustände darstellen. Es wird in Studien verwendet, die die Auswirkungen von akustischer Ablenkung auf die Schmerzempfindung untersuchen. Die erzeugten Töne sind:
 - `1`: Hoher Ton (440 Hz)
 - `0`: Stille
 - `-1`: Tiefer Ton (220 Hz)
 
-Die erzeugte Sequenz dauert standardmäßig fünf Minuten (oder die angegebene Dauer), und die Zustände sind mindestens alle zwei Sekunden voneinander entfernt. Dieses Skript hilft, die Reaktion der Teilnehmer auf Schmerzreize unter dem Einfluss verschiedener akustischer Signale zu untersuchen.
+Die erzeugte Sequenz dauert standardmäßig fünf Minuten (oder die angegebene Dauer), und die Zustände sind mindestens alle zwei Sekunden voneinander getrennt. Dieses Skript hilft, die Reaktionen der Teilnehmenden auf Schmerzreize unter dem Einfluss verschiedener akustischer Signale zu untersuchen.
 
 ### 🇫🇷
 Ce script génère une séquence de motifs auditifs basée sur des valeurs aléatoires de -1, 0 et 1, représentant différents états. Il est conçu pour être utilisé dans des études explorant les effets de la distraction auditive sur la perception de la douleur. Les sons générés sont les suivants :
@@ -34,35 +34,35 @@ Ce script génère une séquence de motifs auditifs basée sur des valeurs aléa
 - `0` : Silence
 - `-1` : Son grave (220 Hz)
 
-La séquence générée dure cinq minutes par défaut (ou la durée renseignée), et les états sont espacés d'au moins deux secondes. Ce script aide à étudier la réaction des participants aux stimuli douloureux sous l'influence de différents indices auditifs.
+La séquence générée dure cinq minutes par défaut (ou la durée indiquée), et les états sont espacés d'au moins deux secondes. Ce script aide à étudier la réaction des participants aux stimuli douloureux sous l'influence de différents indices auditifs.
 
 ## English
 
 ### Requirements
-- A modern web browser (support for JavaScript and Web Audio API)
+- A modern web browser (supporting JavaScript and the Web Audio API)
 
 ### Usage
 1. Go to the [GitHub page](https://sikelio.github.io/distraction-sound-generator/).
-2. Enter a time in minutes (if empty, the time will default to 5 minutes).
+2. Enter a time in minutes (if left empty, the default is 5 minutes).
 3. Click the `Start` button.
 4. The script will generate a random pattern of tones for the specified duration.
-5. The auditory pattern will be played accordingly.
+5. The auditory pattern will then be played accordingly.
 
 ### Customization
 - You can modify the tone frequencies in the `generateTone` function to adjust the sound.
-- Adjust the length of playback or the interval between tones by changing the values in the script.
+- Adjust the playback duration or the interval between tones by changing the corresponding values in the script.
 
 ## Deutsch
 
 ### Anforderungen
-- Ein moderner Webbrowser (Unterstützung für JavaScript und Web Audio API)
+- Ein moderner Webbrowser (mit Unterstützung für JavaScript und die Web Audio API)
 
 ### Verwendung
 1. Besuchen Sie die [GitHub-Seite](https://sikelio.github.io/distraction-sound-generator/).
-2. Geben Sie eine Zeit in Minuten ein (wenn leer, beträgt die Zeit standardmäßig 5 Minuten).
+2. Geben Sie eine Zeit in Minuten ein (wenn das Feld leer bleibt, beträgt die Standardzeit 5 Minuten).
 3. Klicken Sie auf die Schaltfläche Start.
 4. Das Skript erzeugt ein zufälliges Tonmuster für die angegebene Dauer.
-5. Das akustische Muster wird entsprechend abgespielt.
+5. Das akustische Muster wird anschließend abgespielt.
 
 ### Anpassung
 - Sie können die Frequenzen der Töne in der Funktion `generateTone` ändern, um den Klang anzupassen.
@@ -71,18 +71,18 @@ La séquence générée dure cinq minutes par défaut (ou la durée renseignée)
 ## Français
 
 ### Exigences
-- Un navigateur web moderne (support pour JavaScript et Web Audio API)
+- Un navigateur web moderne (prenant en charge JavaScript et l’API Web Audio)
 
 ### Utilisation
 1. Rendez-vous sur la [page GitHub](https://sikelio.github.io/distraction-sound-generator/).
-2. Renseignez un temps en minutes (si vide le temps sera égal à 5 minutes).
+2. Renseignez un temps en minutes (si le champ est vide, la valeur par défaut sera de 5 minutes).
 3. Cliquez sur le bouton `Start`.
-4. Le script générera un motif aléatoire de sons pendant le temps reseigné.
+4. Le script générera un motif aléatoire de sons pendant la durée indiquée.
 5. Le motif auditif sera joué en conséquence.
 
 ### Personnalisation
-- Vous pouvez modifier les fréquences des sons dans la fonction `generateTone` pour ajuster le son.
-- Ajustez la durée de la lecture ou l'intervalle entre les sons en modifiant les valeurs dans le script.
+- Vous pouvez modifier les fréquences des sons dans la fonction `generateTone` pour ajuster le rendu sonore.
+- Ajustez la durée de lecture ou l'intervalle entre les sons en modifiant les valeurs dans le script.
 
 ## Licence / Lizenz / Licence
 
@@ -96,7 +96,7 @@ Dieses Projekt steht unter der Creative Commons Attribution-NonCommercial 4.0 In
 
 ### Français
 
-Ce projet est sous licence Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0). Vous êtes libre d'utiliser, de partager et d'adapter le logiciel à des fins non commerciales, à condition de donner une attribution appropriée.
+Ce projet est sous licence Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0). Vous êtes libre d'utiliser, de partager et d'adapter le logiciel à des fins non commerciales, à des fins non commerciales, à condition d’en mentionner l’auteur
 
 ## Author / Autor / Auteur
 
